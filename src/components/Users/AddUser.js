@@ -9,8 +9,14 @@ const [enteredAge, setEnteredAge] = useState('');
 
   const addUserHandler = (event) => {
     event.preventDefault();
-    // enteredUsername="";
-    // enteredAge="";
+    if(enteredUsername.trim().length===0 || enteredAge.trim().length===0){
+      return;
+    }
+    if(+enteredAge<0){
+      return;
+    }
+    setEnteredUsername('');
+    setEnteredAge('');
     console.log(enteredUsername,enteredAge)
   };
 
