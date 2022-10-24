@@ -1,4 +1,5 @@
 import React ,{useState}  from "react";
+import Buttom from "../UI/Buttom";
 import Card from "../UI/Card";
 import classes from './AddUser.module.css'
 
@@ -19,6 +20,7 @@ const [enteredAge, setEnteredAge] = useState();
       <input type="text" value={enteredUsername}></input>
       <label>age</label>
       <input type="number" value={enteredAge}></input>
+      <Buttom type="submit">add</Buttom>
     </form>
     </Card>
   );
